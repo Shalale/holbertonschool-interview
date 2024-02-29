@@ -11,7 +11,7 @@ def is_opened(index):
 
 def open_box(box_index, boxes): 
     for i in boxes[box_index]:
-       if not i in opened_boxes:
+       if not i in opened_boxes and i<=len(boxes):
            opened_boxes.add(i)
            open_box(i, boxes)
            
