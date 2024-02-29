@@ -4,6 +4,7 @@ Lockboxes algorithm solution
 '''
 
 opened_boxes = set()
+opened_boxes.add(0)
 
 def open_box(box_index, boxes): 
     for i in boxes[box_index]:
