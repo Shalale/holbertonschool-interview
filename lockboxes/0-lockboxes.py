@@ -8,7 +8,9 @@ def open_box(box_index, boxes, opened_boxes):
     for i in boxes[box_index]:
         if i >= len(boxes):
             continue
-        if not isinstance(i, int):
+        # if not isinstance(i, int):
+        #     continue
+        if type(i) != equal int:
             continue
         if i not in opened_boxes:
             opened_boxes.add(i)
