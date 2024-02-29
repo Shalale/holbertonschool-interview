@@ -8,8 +8,6 @@ opened_boxes.add(0)
 
 def open_box(box_index, boxes): 
     for i in boxes[box_index]:
-        if not isinstance(item, int):
-            continue
         if i >= len(boxes):
             continue
         if not i in opened_boxes:
