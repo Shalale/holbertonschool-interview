@@ -6,14 +6,13 @@ Lockboxes algorithm solution
 opened_boxes = set()
 opened_boxes.add(0)
 
-def is_opened(index):
-    return index in opened_boxes
-
 def open_box(box_index, boxes): 
     for i in boxes[box_index]:
-       if not i in opened_boxes and i<=len(boxes):
-           opened_boxes.add(i)
-           open_box(i, boxes)
+        if i >= len(boxes):
+            break
+        if not i in opened_boxes:
+               opened_boxes.add(i)
+               open_box(i, boxes)
            
 def canUnlockAll(boxes):
     open_box(0, boxes)
