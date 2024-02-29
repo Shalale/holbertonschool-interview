@@ -6,11 +6,12 @@ Lockboxes algorithm solution
 opened_boxes = set()
 opened_boxes.add(0)
 
+
 def open_box(box_index, boxes): 
     for i in boxes[box_index]:
         if i >= len(boxes):
             continue
-        if not i in opened_boxes:
+        if i not in opened_boxes:
             opened_boxes.add(i)
             open_box(i, boxes)
                
