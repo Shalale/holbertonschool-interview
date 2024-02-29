@@ -17,4 +17,7 @@ def open_box(box_index):
            
 def canUnlockAll(boxes):
     open_box(0)
-    return len(boxes) == len(opened_boxes)   
+    canUnlockAll = len(boxes) == len(opened_boxes)
+    opened_boxes.clear()
+    return canUnlockAll)   
+    
