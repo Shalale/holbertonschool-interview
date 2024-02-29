@@ -2,6 +2,8 @@
 '''
 Lockboxes algorithm solution
 '''
+
+boxes = {}
 opened_boxes = set()
 opened_boxes.add(0)
 
