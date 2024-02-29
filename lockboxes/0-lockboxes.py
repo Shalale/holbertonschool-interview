@@ -7,7 +7,7 @@ opened_boxes = set()
 opened_boxes.add(0)
 
 
-def open_box(box_index, boxes): 
+def open_box(box_index, boxes):
     for i in boxes[box_index]:
         if i >= len(boxes):
             continue
@@ -21,5 +21,5 @@ def canUnlockAll(boxes):
     canUnlockAll = len(boxes) == len(opened_boxes)
     opened_boxes.clear()
     opened_boxes.add(0)
-    return canUnlockAll   
+    return canUnlockAll
     
