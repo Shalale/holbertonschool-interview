@@ -19,5 +19,5 @@ def canUnlockAll(boxes):
     open_box(0)
     canUnlockAll = len(boxes) == len(opened_boxes)
     opened_boxes.clear()
-    return canUnlockAll)   
+    return canUnlockAll   
     
