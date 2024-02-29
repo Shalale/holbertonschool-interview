@@ -13,7 +13,7 @@ def open_box(box_index, boxes):
     for i in boxes[box_index]:
        if not i in opened_boxes:
            opened_boxes.add(i)
-           open_box(i)
+           open_box(i, boxes)
            
 def canUnlockAll(boxes):
     open_box(0, boxes)
