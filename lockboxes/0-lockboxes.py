@@ -13,7 +13,6 @@ def open_box(box_index):
     for i in boxes[box_index]:
        if not i in opened_boxes:
            opened_boxes.add(i)
-           print(opened_boxes)
            open_box(i)
            
 def canUnlockAll(boxes):
