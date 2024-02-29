@@ -3,22 +3,18 @@
 Lockboxes algorithm solution
 '''
 
-opened_boxes = set()
-opened_boxes.add(0)
 
-
-def open_box(box_index, boxes):
+def open_box(box_index, boxes, opened_boxes):
     for i in boxes[box_index]:
         if i >= len(boxes):
             continue
         if i not in opened_boxes:
             opened_boxes.add(i)
-            open_box(i, boxes)
+            open_box(i, boxes, opened_boxes)
 
 
 def canUnlockAll(boxes):
-    open_box(0, boxes)
-    canUnlockAll = len(boxes) == len(opened_boxes)
-    opened_boxes.clear()
-    opened_boxes.add(0)
-    return canUnlockAll
+    opened_boxes = {0}
+    open_box(0, boxes, opened_boxes)
+    can_unlock_all = len(boxes) == len(opened_boxes)
+    return can_unlock_all
