@@ -7,7 +7,7 @@ Lockboxes algorithm solution
 def open_box(box_index, boxes, opened_boxes):
     for i in boxes[box_index]:
         if not isinstance(i, int) or i >= len(boxes):
-            contunie
+            continue
         if i not in opened_boxes:
             opened_boxes.add(i)
             open_box(i, boxes, opened_boxes)
