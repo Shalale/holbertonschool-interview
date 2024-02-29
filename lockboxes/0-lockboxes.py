@@ -1,3 +1,8 @@
+#!/usr/bin/python3
+'''
+Lockboxes algorithm solution
+'''
+
 opened_boxes = set()
 opened_boxes.add(0)
 
@@ -11,7 +16,7 @@ def open_box(box_index):
            print(opened_boxes)
            open_box(i)
            
-
 def canUnlockAll(boxes):
     open_box(0)
     print(len(boxes) == len(opened_boxes))
+    
