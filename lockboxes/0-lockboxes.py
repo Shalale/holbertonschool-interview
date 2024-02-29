@@ -3,7 +3,7 @@
 Lockboxes algorithm solution
 '''
 
-boxes = {}
+boxes = [[1], [2], [3], [4], []]
 opened_boxes = set()
 opened_boxes.add(0)
 
